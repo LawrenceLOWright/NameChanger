@@ -1,7 +1,8 @@
-chrome.storage.local.get(['originalName', 'newName'], function(items) {
-  if (items.originalName && items.newName) {
-    const bodyText = document.body.innerHTML;
-    const regex = new RegExp(items.originalName, 'gi');
-    document.body.innerHTML = bodyText.replace(regex, items.newName);
-  }
+chrome.storage.local.get(['namePairs'], function(result) {
+  const namePairs = result.namePairs || [];
+
+  namePairs.forEach(pair => {
+    const regex = new RegExp(pair.originalName, 'gi');
+    document.body.innerHTML = document.body.innerHTML.replace(regex, pair.newName);
+  });
 });
