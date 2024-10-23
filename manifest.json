@@ -1,15 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Name Changer",
+  "name": "Name Replacer",
   "version": "1.0",
   "description": "Replace specific names on a webpage with user-defined alternatives.",
   "permissions": ["activeTab", "storage", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_title": "Name Replacer"
-  },
-  "background": {
-    "service_worker": "background.js"
   },
   "content_scripts": [
     {
