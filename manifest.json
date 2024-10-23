@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Name Changer",
   "version": "1.0",
-  "description": "Replace specific names on a webpage with user-defined alternatives.",
+  "description": "Replace names on anything you'd like!",
   "permissions": ["activeTab", "storage", "scripting"],
   "action": {
     "default_popup": "popup.html",
