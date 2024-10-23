@@ -1,10 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "NameChanger",
-  "description": "Base Level Extension",
+  "name": "Name Replacer",
   "version": "1.0",
+  "description": "Replace specific names on a webpage with user-defined alternatives.",
+  "permissions": ["activeTab", "storage", "scripting"],
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
+    "default_popup": "popup.html",
+    "default_title": "Name Replacer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
 }
